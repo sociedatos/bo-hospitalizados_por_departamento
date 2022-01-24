@@ -1,3 +1,3 @@
-Datos de ocupación hospitalaria por departamento y establecimiento de salud en Bolivia
+Datos de ocupación hospitalaria por departamento en Bolivia.
 
 Fuente: Ministerio de Salud
