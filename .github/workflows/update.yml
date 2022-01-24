@@ -14,7 +14,7 @@ jobs:
           ref: master
       - name: sync
         run: |
-          curl -s https://https://${{ secrets.BOT_TOKEN }}@raw.githubusercontent.com/sociedatos/hospitalizados-bolivia/main/data/internaciones.departamentos.csv > hospitalizados_por_departamento.csv
+          curl -s https://${{ secrets.BOT_TOKEN }}@raw.githubusercontent.com/sociedatos/hospitalizados-bolivia/main/data/internaciones.departamentos.csv > hospitalizados_por_departamento.csv
       - name: commit
         run: |
           git config --global user.email "mauriforonda+socialdatos@gmail.com"
