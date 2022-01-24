@@ -13,11 +13,10 @@ jobs:
           ref: master
       - name: sync
         run: |
-          curl -s https://$GH_TOKEN@raw.githubusercontent.com/sociedatos/hospitalizados-bolivia/main/data/internaciones.departamentos.csv > hospitalizaciones_por_departamento.csv
-          curl -s https://$GH_TOKEN@raw.githubusercontent.com/sociedatos/hospitalizados-bolivia/main/data/internaciones.csv > flujo_hospitalario.csv
+          curl -s https://$GH_TOKEN@raw.githubusercontent.com/sociedatos/hospitalizados-bolivia/main/data/internaciones.departamentos.csv > hospitalizados_por_departamento.csv
       - name: commit
         run: |
           git config --global user.email covid19-bot@example.com"
           git config --global user.name "covid19-bot"
           git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "[ci] actualización"; git push -q "https://$GH_TOKEN@github.com/sociedatos/covid19-bo-hospitalizados.git" master)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "[ci] actualización"; git push -q "https://$GH_TOKEN@github.com/sociedatos/bo-hospitalizados_por_departamento.git" master)
